@@ -1,7 +1,9 @@
+/// <reference path="../source/interfaces/interfaces.d.ts" />
+
 import { expect } from "chai";
 import Calculator from "../source/entities/calculator";
 
-const calc = new Calculator();
+const calc: IStringCalculator = new Calculator();
 
 function testResult(expression: string, result: number): void {
     it(`shoud evaluate '${expression.replace(/\n/g, "\\n")}' to ${result}`, () => {
